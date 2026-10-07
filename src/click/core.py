@@ -706,7 +706,7 @@ class Context:
             Added the ``call`` parameter.
         """
         if self.default_map is not None:
-            value = self.default_map.get(name, UNSET)
+            value = self.default_map.get(name, None)
 
             if call and callable(value):
                 return value()
